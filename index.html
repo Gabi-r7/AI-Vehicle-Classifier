@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <!-- Adicione as bibliotecas do TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="main.js"></script>
+    <title>AI Vehicle Classifier</title>
+</head>
+<body>
+    <h1>Classify your vehicle pictures here</h1>
+    
+    <div class="upload-container">
+        <label for="image-input">Select a vehicle image:</label>
+        <div class="file-input-wrapper">
+            <input type="file" id="image-input" name="image" accept="image/*">
+            <div class="file-input-button" onclick="document.getElementById('image-input').click()">
+                📁 Choose File
+            </div>
+        </div>
+        <button type="button" onclick="classifyImage()">🚗 Classify</button>
+        
+        <div id="result-container">
+            <p id="classification-result">Select an image to start</p>
+        </div>
+    </div>
+    
+    <div id="preview-container" style="display: none;">
+        <img id="image-preview" alt="Image preview">
+    </div>
+    
+</body>
+</html>
